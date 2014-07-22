@@ -1,0 +1,61 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}"/>
+
+<h1 class="page-header">
+    Выставлялка баллов
+</h1>
+<!--
+<table class="navigation">
+    <tr>
+        <td class="navigation">
+            <a href="{% url 'registers'%}">потоки</a>
+        </td>
+        <td class="navigation">
+            <a href="servlet/logout">выйти</a>
+        </td>
+    </tr>
+</table>
+-->
+
+<h2>
+    <a href="{% url 'registers'%}">потоки</a> &mdash;
+        <a href="{% url 'stream' semester.stream.id %}">{{ semester.stream.name }}</a> &mdash;
+        {{ semester.name }}
+</h2>
+
+<table class="semester">
+    <tr class="semester">
+        <td class="semester">
+            {% if students %}
+            <ul class="compact">
+                {% for student in students %}
+                <li>
+                    <a href="" class="{{ student.get_state_display }}">
+                        {{ student.last_name }} {{ student.first_name }} {{ student.father_name }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>Нет ни одного студента</p>
+            {% endif %}
+
+        </td>
+        <td class="semester">
+            {% if courses %}
+            <ul class="compact">
+                {% for course in courses %}
+                <li>
+                    <a href="" class="{{ course.get_state_display }}">{{ course.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>Нет ни одного предмета</p>
+            {% endif %}
+
+        </td>
+    </tr>
+</table>
+
+<a class="small">обновить из гуглодока</a>

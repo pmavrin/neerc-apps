@@ -1,0 +1,12 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+
+{% if persons_list %}
+    <ul>
+    {% for person in persons_list %}
+        <li><a href="{% url 'details' person.id %}">{{ person.first_name }} {{ person.last_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No persons are available.</p>
+{% endif %}

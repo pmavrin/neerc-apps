@@ -1,0 +1,251 @@
+body {
+    font-family: Verdana, Serif;
+    font-size: 12pt;
+    color: #000000;
+    padding: 20px;
+    margin: 0;
+}
+
+h1, h2, h3, a.header {
+    font-family: Arial, SunSans-Regular, Sans-Serif;
+    text-align: left;
+    margin: 0;
+}
+
+h1.page-header {
+}
+
+h1 {
+    padding-top: 10pt;
+    font-size: 18pt;
+}
+
+h2 {
+    padding-top: 10pt;
+    font-size: 16pt;
+}
+
+h3 {
+    padding-top: 10pt;
+    font-size: 14pt;
+}
+
+img {
+    border: none;
+}
+
+table.login {
+    border: none;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+}
+
+td.login-label td.login-input {
+    width: 10em;
+}
+
+.error {
+    color:red;
+}
+
+table.navigation {
+    border: none;
+    margin-bottom: 1em;
+}
+
+td.navigation {
+    padding: 0.5em;
+}
+
+/* Streams table */
+table.streams {
+    border: none;
+    padding-top: 1em;
+}
+
+td.streams {
+    padding: 0.5em;
+    vertical-align: top;
+}
+
+th.streams {
+    font-family: Arial, SunSans-Regular, Sans-Serif;
+    color: #a05000;
+    text-align: left;
+    font-size: 14pt;
+    padding-right: 1em;
+    width: 6em;
+}
+
+a.disabled {
+    color: #f0f0f0;
+}
+a.error {
+    color: #f00000;
+}
+a.ok {
+    color: #00f000;
+}
+a.pending {
+    color: #d0d000;
+}
+
+ul.compact {
+    list-style-type: none;
+    margin-left:-2em;
+}
+
+a.small {
+    color: #a0a0c0;
+    font-size: 10pt;
+}
+
+/* Semester details table */
+table.semester {
+    border: none;
+}
+
+td.semester {
+    padding: 0.5em;
+    vertical-align: top;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Groups Table */
+
+table.groups {
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+tr.group-odd, tr.group-even  {
+}
+
+tr.group-odd {
+    background-color: #d0f0f0;
+}
+
+tr.group-even {
+    background-color: #b0e0e0;
+}
+
+td.group-indent-0, td.group-indent-1, td.group-indent-2, td.group-indent-3, td.group-indent-4, td.group-indent-5, td.group-indent-6, td.group-indent-7, td.group-period {
+    width: 30%;
+    padding: 5px;
+}
+td.group-indent-0 {padding-left: 0.5em;}
+td.group-indent-1 {padding-left: 2em;}
+td.group-indent-2 {padding-left: 4em;}
+td.group-indent-3 {padding-left: 6em;}
+td.group-indent-4 {padding-left: 8em;}
+td.group-indent-5 {padding-left: 10em;}
+td.group-indent-6 {padding-left: 12em;}
+td.group-indent-7 {padding-left: 14em;}
+
+td.group-period {
+    width: 2em;
+    text-align:center;
+}
+
+/* Plan Table */
+
+table.plan {
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+tr.plan-odd, tr.plan-even  {
+}
+
+tr.plan-odd {
+    background-color: #d0f0f0;
+}
+
+tr.plan-even {
+    background-color: #b0e0e0;
+}
+
+td.plan-theme, td.plan-period  {
+    padding: 5px;
+}
+
+td.plan-theme {
+    width: 30%;
+}
+
+td.plan-period {
+    text-align:center;
+}
+
+
+span.period-0, span.period-1, span.period-2, span.period-3, span.period-4,
+span.period-5, span.period-6, span.period-7, span.period-8, span.period-9,
+span.period-10, span.period-11, span.period-12, span.period-13, span.period-14,
+span.period-15, span.period-16, span.period-17, span.period-18, span.period-19
+{
+    font-weight: bold;
+}
+span.period-0 {color: #b30099;}
+span.period-1 {color: #800000;}
+span.period-2 {color: #b39900;}
+span.period-3 {color: #248000;}
+span.period-4 {color: #00b366;}
+span.period-5 {color: #004980;}
+span.period-6 {color: #3300e3;}
+span.period-7 {color: #80006d;}
+span.period-8 {color: #b30000;}
+span.period-9 {color: #806d00;}
+span.period-10 {color: #33b300;}
+span.period-11 {color: #008049;}
+span.period-12 {color: #0066e3;}
+span.period-13 {color: #240080;}
+span.period-14 {color: #b30099;}
+span.period-15 {color: #800000;}
+span.period-16 {color: #b39900;}
+span.period-17 {color: #248000;}
+span.period-18 {color: #00b366;}
+span.period-19 {color: #004980;}
+
+table.form {
+    border: none;
+    border-collapse: collapse;
+}
+tr.form {
+    border: none;
+    border-collapse: collapse;
+}
+td.form-label, td.form-input, th.form {
+    padding: 5px;
+}
+
+input.dangerous {
+    background-color: red;
+    color: white;
+}
+
+/*Pop up hint box */
+.hintstyle {
+    font-size: 10pt;
+    color: #000000;
+    position:fixed;
+    background:#ffffdd;
+    border:1px solid silver;
+    padding:2px;
+}

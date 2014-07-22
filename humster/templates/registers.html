@@ -1,0 +1,55 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
+
+<h1 class="page-header">
+    Выставлялка баллов
+</h1>
+
+        <!--
+<table class="navigation">
+    <tr>
+        <td class="navigation">
+            потоки
+        </td>
+        <td class="navigation">
+            <a href="servlet/logout">выйти</a>
+        </td>
+    </tr>
+</table>
+-->
+
+<h2>
+    потоки
+</h2>
+
+{% if streams %}
+<table class="streams">
+    <tr>
+    {% for stream in streams %}
+        <th class="streams">
+             <a href="{% url 'stream' stream.id %}">{{ stream.name }}</a>
+        </th>
+    {% endfor %}
+        <!--
+        <th class="streams">
+            <a href="addStream">+</a>
+        </th>
+        -->
+    </tr>
+    <tr>
+    {% for semesters in semesters_list %}
+        <td class="streams">
+            <ul class="compact">
+                {% for semester in semesters %}
+                <li>
+                     <a href="{% url 'semester' semester.id %}" class="{{ semester.get_state_display }}">{{ semester.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </td>
+    {% endfor %}
+    </tr>
+</table>
+{% else %}
+    <p>Не задано ни одного потока. <a href="add_stream">Добавить</a></p>
+{% endif %}

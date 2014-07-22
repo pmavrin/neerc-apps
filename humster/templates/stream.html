@@ -1,0 +1,37 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}"/>
+
+<h1 class="page-header">
+    Выставлялка баллов
+</h1>
+<!--
+<table class="navigation">
+    <tr>
+        <td class="navigation">
+            <a href="{% url 'registers'%}">потоки</a>
+        </td>
+        <td class="navigation">
+            <a href="servlet/logout">выйти</a>
+        </td>
+    </tr>
+</table>
+-->
+
+<h2>
+    <a href="{% url 'registers'%}">потоки</a> &mdash;
+    {{ stream.name }}
+</h2>
+
+<ul class="compact">
+    {% for semester in semesters %}
+    <li>
+        <a href="{% url 'semester' semester.id %}" class="{{ semester.get_state_display }}">{{ semester.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+{% if fail %}
+<p class="error"> {{ fail }} </p>
+{% endif %}
+
+<a class="small" href="{% url 'reload_stream' stream.id %}">обновить из гуглодока</a>
